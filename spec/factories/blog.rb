@@ -14,13 +14,5 @@ FactoryGirl.define do
       preview "This is the second post's preview"
       body "This is the body of the second post."
     end
-
-   factory :blog_no_3 do
-      id 3
-      title "No.3 Post"
-      preview "This is the third post's preview"
-      body "This is the body of the third post."
-    end
-
   end
 end
