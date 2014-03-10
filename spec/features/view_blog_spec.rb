@@ -10,8 +10,9 @@ feature "Viewer sees all Blog posts" do
     visit blog_path
 
     expect(page).to have_content("No.1 Post")
-    expect(page).to have_link("No.1 Post")
+    expect(page).to have_content("This is the first post's preview")
 
+    expect(page).to have_link("No.1 Post")
     expect(page).to have_link("No.2 Post")
   end
 

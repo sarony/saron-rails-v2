@@ -1,6 +1,7 @@
 %h1 Blogs
 - @blogs.each do |blog|
   %h2= blog.title
+  %p= blog.preview
   = link_to blog.title, blog_path(blog)
 
     
