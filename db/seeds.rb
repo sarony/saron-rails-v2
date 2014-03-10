@@ -7,5 +7,6 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 blogs = Blog.create([{
-    title: "No. 1 Post"
+    title: "No. 1 Post",
+    slug: "no-1-post"
   }])

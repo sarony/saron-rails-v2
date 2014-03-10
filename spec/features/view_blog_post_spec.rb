@@ -1,17 +1,14 @@
 require 'spec_helper'
 
 feature "Viewer sees individual Blog posts" do  
-  let(:blog_no_1){FactoryGirl.create(:blog_no_1)}
-  let(:blog_no_2){FactoryGirl.create(:blog_no_2)}
+  let(:blog_no_1){FactoryGirl.build(:blog_no_1)}
+  let(:blog_no_2){FactoryGirl.build(:blog_no_2)}
 
-  scenario "after clicking on the first blog post" do  
-    Blog.should_receive(:all).and_return([blog_no_1, blog_no_2])
-
-    visit blog_path
-
-    expect(page).to have_link("No.1 Post")
-
-    click_link("No.1 Post")
+  scenario "when visiting the show page for the blog post" do  
+    # TODO: this feels forced. I think there's a better way to implement this
+    # Blog.should_receive(:where).and_return([blog_no_1])
+    blog_no_1=FactoryGirl.create(:blog_no_1)
+    @blog = blog_no_1
     visit blog_post_path(blog_no_1)
 
     expect(page).to have_content("No.1 Post")
