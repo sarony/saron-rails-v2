@@ -25,4 +25,6 @@ ActiveRecord::Schema.define(version: 20140310061522) do
     t.string   "slug"
   end
 
+  add_index "blogs", ["slug"], name: "index_blogs_on_slug", using: :btree
+
 end

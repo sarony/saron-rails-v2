@@ -7,7 +7,7 @@ class BlogController < ApplicationController
   end
 
   def show
-    @blog = Blog.friendly.where(:id => params[:slug]).first
+    @blog = Blog.friendly.find(params[:slug])
   end
 
 end
