@@ -6,5 +6,7 @@ class BlogController < ApplicationController
     @blogs = Blog.all
   end
 
+  def show
+  end
 
 end

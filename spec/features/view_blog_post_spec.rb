@@ -12,6 +12,7 @@ feature "Viewer sees individual Blog posts" do
     expect(page).to have_link("No.1 Post")
 
     click_link("No.1 Post")
+    visit blog_post_path(blog_no_1)
 
     expect(page).to have_content("No.1 Post")
     expect(page).to have_content("This is the body of the first post.")

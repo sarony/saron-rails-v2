@@ -14,4 +14,15 @@ describe BlogController do
     end
   end
 
+  describe "GET show" do  
+    let(:first_blog){FactoryGirl.create(:blog_no_1)}
+
+    it "shows the first blog" do 
+      get :show, slug: first_blog.slug
+
+      assigns('blog').should eq(first_blog)
+      response.should render_template :show
+    end
+  end
+
 end

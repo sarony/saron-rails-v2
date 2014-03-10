@@ -15,6 +15,11 @@ describe Blog do
     it "should have a body" do
       expect(blog_no_1.body).to eq("This is the body of the first post.")
     end
+
+    it "should have a slug" do
+      expect(blog_no_1.slug).to eq("no-1-post")
+    end
+
   end
 
 end
