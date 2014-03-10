@@ -4,6 +4,7 @@ SaronRailsV2::Application.routes.draw do
   get '/' => 'home#index', :as => "root"
   get '/about' => 'home#about', :as => 'about'
   get '/projects' => 'home#projects', :as => 'projects'
+  get '/blog' => 'blog#index', :as => 'blogs'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
