@@ -37,9 +37,12 @@ group :production, :development, :test do
 end
 
 group :development, :test do
+  gem 'awesome_print'
+end
+
+group :development do
   gem 'better_errors'
   gem 'binding_of_caller'
-  gem 'awesome_print'
 end
 
 group :test do
