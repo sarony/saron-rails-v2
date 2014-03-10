@@ -53,6 +53,7 @@ group :test do
   gem 'capybara'
   gem 'simplecov', :require => false
   gem 'pry'
+  gem 'database_cleaner'
 end
 
 # Use ActiveModel has_secure_password
