@@ -8,6 +8,7 @@ class BlogController < ApplicationController
 
   def show
     @blog = Blog.friendly.find(params[:slug])
+    binding.pry
   end
 
 end

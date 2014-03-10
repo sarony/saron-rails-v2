@@ -8,7 +8,7 @@
 
 blogs = Blog.create([{
     title: "No. 1 Post",
-    slug: "no-1-post"
+    body: "This is the body"
   },
   {
     title: "No. 2 Post"

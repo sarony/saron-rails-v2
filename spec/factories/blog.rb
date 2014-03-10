@@ -13,7 +13,6 @@ FactoryGirl.define do
       title "No.2 Post"
       preview "This is the second post's preview"
       body "This is the body of the second post."
-      slug "no-2-post"
     end
 
    factory :blog_no_3 do
@@ -21,7 +20,6 @@ FactoryGirl.define do
       title "No.3 Post"
       preview "This is the third post's preview"
       body "This is the body of the third post."
-      slug "no-3-post"
     end
 
   end

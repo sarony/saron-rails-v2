@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe Blog do
-  let(:blog_no_1) { FactoryGirl.create(:blog_no_1) }
+  let(:blog_no_1) { FactoryGirl.build(:blog_no_1) }
 
   describe "blog" do
     it "should have a title" do
@@ -14,10 +14,6 @@ describe Blog do
     
     it "should have a body" do
       expect(blog_no_1.body).to eq("This is the body of the first post.")
-    end
-
-    it "should have a slug" do
-      expect(blog_no_1.slug).to eq("no-1-post")
     end
 
   end
