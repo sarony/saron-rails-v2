@@ -13,7 +13,7 @@ describe Blog do
     end
     
     it "should have a body" do
-      expect(blog_no_1.body).to eq("This is the body of the post.")
+      expect(blog_no_1.body).to eq("This is the body of the first post.")
     end
   end
 
