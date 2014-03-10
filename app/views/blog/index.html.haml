@@ -1,5 +1,6 @@
 %h1 Blogs
 - @blogs.each do |blog|
   %h2= blog.title
+  = link_to blog.title, blog_path(blog)
 
     
