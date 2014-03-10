@@ -1,6 +1,7 @@
 SaronRailsV2::Application.routes.draw do
   
 
+  get '/' => 'home#index', :as => "root"
   get '/about' => 'home#about', :as => 'about'
   get '/projects' => 'home#projects', :as => 'projects'
 
