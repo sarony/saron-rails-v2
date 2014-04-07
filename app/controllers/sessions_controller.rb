@@ -6,8 +6,6 @@ class SessionsController < ApplicationController
 
   def create
     session[:password] = params[:password]
-    binding.pry
-    # TODO: figure out 'flash notice'
     flash[:notice] = 'Yea gurl!'
     redirect_to '/'
   end

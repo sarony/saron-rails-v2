@@ -6,9 +6,12 @@ SaronRailsV2::Application.routes.draw do
   get '/projects' => 'home#projects', :as => 'projects'
   
   # blog posts
-  get '/blog' => 'blog#index', :as => 'blog'
-  get '/blog/new' => 'blog#new', :as => 'new_blog_post'
-  get '/blog/:slug' => 'blog#show', :as => 'blog_post'
+  get '/blogs' => 'blog#index', :as => 'blogs'
+  get '/blogs/new' => 'blog#new', :as => 'new_blog'
+  post '/blogs' => 'blog#create'
+  get '/blogs/:slug' => 'blog#show', :as => 'blog'
+  get 'blogs/:slug/edit' => "blog#edit", :as => 'edit_blog'
+  patch 'blogs/:slug' => "blog#update"
 
   # login
   get '/login' => "sessions#new"

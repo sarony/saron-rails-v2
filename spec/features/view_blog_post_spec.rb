@@ -6,7 +6,7 @@ feature "Viewer sees individual Blog posts" do
 
     blog_no_1=FactoryGirl.create(:blog_no_1)
     @blog = blog_no_1
-    visit blog_post_path(@blog)
+    visit blog_path(@blog)
 
     expect(page).to have_content("This is the body of the first post.")
     expect(page).to have_content("No.1 Post")

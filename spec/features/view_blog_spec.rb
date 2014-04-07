@@ -7,7 +7,7 @@ feature "Viewer sees all Blog posts" do
     blog_no_2=FactoryGirl.build(:blog_no_2)
     Blog.should_receive(:all).and_return([blog_no_1, blog_no_2])
 
-    visit blog_path
+    visit blogs_path
 
     expect(page).to have_content("No.1 Post")
     expect(page).to have_content("This is the first post's preview")
