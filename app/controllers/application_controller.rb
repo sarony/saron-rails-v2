@@ -18,5 +18,6 @@ class ApplicationController < ActionController::Base
     binding.pry
     session[:password] == ENV["PW"]
   end
+  helper_method :admin?
 
 end

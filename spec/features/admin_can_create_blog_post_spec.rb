@@ -1,8 +1,8 @@
 require 'spec_helper'
 
 feature "Admin can create new blog post" do  
-
   scenario "after clicking on the New Post link from Blog" do  
+    ApplicationController.any_instance.stub(:admin?).and_return(true)
     visit blog_path
     click_link("New Post")
 
@@ -15,6 +15,7 @@ end
 feature "Visitor cannot create new blog post" do  
 
   scenario "and doesn't see New Post link on Blog" do  
+    ApplicationController.any_instance.stub(:admin?).and_return(false)
     visit blog_path
 
     expect(page).not_to have_link("New Post")
