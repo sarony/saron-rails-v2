@@ -1,5 +1,5 @@
 SaronRailsV2::Application.routes.draw do
-  
+  resources :sessions
 
   get '/' => 'home#index', :as => "root"
   get '/about' => 'home#about', :as => 'about'
@@ -7,7 +7,12 @@ SaronRailsV2::Application.routes.draw do
   
   # blog posts
   get '/blog' => 'blog#index', :as => 'blog'
+  get '/blog/new' => 'blog#new', :as => 'new_blog_post'
   get '/blog/:slug' => 'blog#show', :as => 'blog_post'
+
+  # login
+  get '/login' => "sessions#new"
+  get '/logout' => "sessions#destroy"
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
